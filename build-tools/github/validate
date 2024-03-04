@@ -1,0 +1,21 @@
+#!/bin/bash
+# Run all validation scripts.
+# This script runs on GitHub in the PR build, NOT ON HEROKU. It can therefore not
+# rely on the dependencies of the top-level package.json having been installed.
+set -eu
+scriptdir=$(cd $(dirname $0) && pwd)
+
+# TODOs about extracting by JW 2023-10-03 for PR #4574
+$scriptdir/validate-typescript # TODO extract
+$scriptdir/validate-yaml # TODO extract
+if [[ "${1:-}" == "--all" ]]; then
+  $scriptdir/validate-tests --all
+elif [[ "${1:-}" == "--weblate" ]]; then
+  $scriptdir/validate-tests --weblate
+else
+  $scriptdir/validate-tests
+fi
+$scriptdir/validate-e2e # TODO extract
+python3 $scriptdir/validate-pofiles # TODO #extract
+
+echo "Everything is great! 🍰"

@@ -1,0 +1,25 @@
+CheckInternet: Proveri da li imaš internet konekciju.
+Connection_error: Ne mogu dostignuti server.
+Empty_output: Ovaj kod radi, ali ne prikazuje ništa. Dodaj komandu za prikazivanje u kodu ili koristi turtle da prikažeš rezultat.
+Errors_found: Napravio si grešku! Ne brini, i dalje smo uspeli da pokrenemo program
+Execute_error: Nešto se pokvarilo dok je program radio.
+Other_error: Ups! Možda smo napravili malu grešku.
+Program_repair: Možda je ovo ispravan kod, možeš li ga popraviti?
+Program_too_long: Tvoj program zahteva mnogo vremena za pokretanje.
+ServerError: Napisali ste program koji nismo očekivali. Ako želite da pomognete, pošaljite nam mejl sa nivoom i vašim programom na hello@hedy.org. U međuvremenu, pokušajte nešto malo drugačije i pogledajte još jednom primere. Hvala!
+Transpile_error: Ne možemo da pokrenemo tvoj program.
+Transpile_success:
+- Dobar posao!
+- Neverovatno!
+- Dobro urađeno!
+- Odlično!
+- Bio si odličan!
+Transpile_warning: Upozorenje!
+Unsaved_Changes: Nisi sačuvao program. Želiš li da izađeš bez čuvanja?
+dice: 🎲
+fortune: 🔮, ✨
+haunted: 🦇, 👻, 🎃
+restaurant: 🍣, 🍕, 🍔
+rock: ✂️, 📜, 🗻
+songs: 🎵,🎶
+turtle: 🐢

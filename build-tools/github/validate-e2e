@@ -1,0 +1,24 @@
+#!/bin/bash
+# Helper script to run e2e tests against a local test instance
+set -eu
+scriptdir=$(cd $(dirname $0) && pwd)
+
+echo "------> End-to-end tests"
+
+# This is expected to run from the repo root
+cd $scriptdir/../..
+
+pids=""
+trap "$scriptdir/start-debug-server --kill" EXIT
+
+export PORT=5050
+$scriptdir/start-debug-server --daemon
+
+
+# Finally!
+if ! env ENDPOINT=http://localhost:$PORT pytest -q tests_e2e.py "$@"; then
+    # Sleep a bit to give the server the chance to flush the log
+    echo "Some e2e test failed. Here's the tail of the server log:" >&2
+    tail -n 50 e2e-server.log >&2
+    exit 1
+fi

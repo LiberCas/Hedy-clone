@@ -1,0 +1,1 @@
+You can find more information about the syntax highlighting in this section of the wiki: https://github.com/hedyorg/hedy/wiki/Hedy-Architecture#syntax-highlighting

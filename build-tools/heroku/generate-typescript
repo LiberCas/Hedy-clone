@@ -1,0 +1,6 @@
+#!/bin/bash
+set -eu
+echo "🦄 This command has been replaced! To compile TypeScript, type the following":
+echo ""
+echo "    doit run typescript"
+exit 1
